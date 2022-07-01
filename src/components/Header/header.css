@@ -1,0 +1,20 @@
+.header {
+    padding: 25px;
+    text-align: center;
+    background: #222;
+    color:white
+}
+.header h1 {
+    font-size: 60px;
+    margin: -20px;
+    padding: -20px;
+}
+.header h2 {
+        font-size: 1.5em;
+        margin: -20px;
+        padding: -20px;
+}
+.logos {
+    margin: -20px;
+    padding: -20px;
+}
