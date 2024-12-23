@@ -1,20 +1,112 @@
 .header {
-    padding: 25px;
-    text-align: center;
-    background: #222;
-    color:white
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .header h1 {
-    font-size: 60px;
-    margin: -20px;
-    padding: -20px;
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin: 0;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #fff, #a8a8a8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
 }
+
 .header h2 {
-        font-size: 1.5em;
-        margin: -20px;
-        padding: -20px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 5px 0 0 0;
+    opacity: 0.8;
+    letter-spacing: 1px;
 }
+
 .logos {
-    margin: -20px;
-    padding: -20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 25px;
+    width: auto;
+    align-items: center;
+}
+
+.logos img {
+    transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.1);
+}
+
+.directory {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.directory h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.directory h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #fff, transparent);
+    transition: width 0.3s ease;
+}
+
+.directory h3:hover {
+    color: #fff;
+}
+
+.directory h3:hover::after {
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .directory {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+    }
 }
